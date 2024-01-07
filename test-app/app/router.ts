@@ -8,4 +8,9 @@ export default class Router extends EmberRouter {
 
 Router.map(function () {
   // Add route declarations here
+  this.route('components', function () {
+    this.route('control', function () {
+      this.route('button');
+    });
+  });
 });

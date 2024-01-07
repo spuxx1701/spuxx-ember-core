@@ -1,0 +1,52 @@
+.spec__button {
+  min-height: var(--spec-control-height);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 1rem;
+  border: none;
+  border-radius: var(--spec-border-radius);
+  font-size: var(--spec-font-size);
+  max-width: 100%;
+}
+
+.spec__button:not(:disabled):hover {
+  cursor: pointer;
+}
+
+.spec__button-icon {
+  font-size: larger;
+}
+
+.spec__button-text {
+  margin: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
+.spec__button-icon + .spec__button-text {
+  margin-left: 0.5rem;
+}
+
+.spec__button-primary {
+  background-color: var(--spec-color-primary);
+  color: var(--spec-color-primary-content);
+}
+
+.spec__button-secondary {
+  color: var(--spec-color-secondary);
+  border: 1px solid var(--spec-color-secondary-content);
+  background-color: transparent;
+}
+
+.spec__button-tertiary {
+  background-color: var(--spec-color-tertiary);
+  color: var(--spec-color-tertiary-content);
+}
+
+.spec__button:disabled {
+  filter: var(--spec-filter-disabled);
+}

@@ -1,13 +1,13 @@
 {
-  "name": "spuxx-ember-core",
-  "version": "0.0.0",
-  "description": "The default blueprint for Embroider v2 addons.",
+  "name": "@spuxx/ember-core",
+  "version": "0.0.1",
+  "description": "A core package for my Ember apps.",
   "keywords": [
     "ember-addon"
   ],
   "repository": "",
   "license": "MIT",
-  "author": "",
+  "author": "spuxx",
   "exports": {
     ".": {
       "types": "./declarations/index.d.ts",
@@ -50,7 +50,9 @@
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.8.7",
-    "decorator-transforms": "^1.0.1"
+    "decorator-transforms": "^1.0.1",
+    "@fortawesome/ember-fontawesome": "^2.0.0",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.23.6",
@@ -63,27 +65,6 @@
     "@glint/template": "^1.2.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@tsconfig/ember": "^3.0.2",
-    "@types/ember": "^4.0.10",
-    "@types/ember__application": "^4.0.10",
-    "@types/ember__array": "^4.0.9",
-    "@types/ember__component": "^4.0.21",
-    "@types/ember__controller": "^4.0.11",
-    "@types/ember__debug": "^4.0.7",
-    "@types/ember__destroyable": "^4.0.4",
-    "@types/ember__engine": "^4.0.10",
-    "@types/ember__error": "^4.0.5",
-    "@types/ember__helper": "^4.0.5",
-    "@types/ember__modifier": "^4.0.8",
-    "@types/ember__object": "^4.0.11",
-    "@types/ember__owner": "^4.0.8",
-    "@types/ember__polyfills": "^4.0.5",
-    "@types/ember__routing": "^4.0.19",
-    "@types/ember__runloop": "^4.0.8",
-    "@types/ember__service": "^4.0.8",
-    "@types/ember__string": "^3.16.3",
-    "@types/ember__template": "^4.0.5",
-    "@types/ember__test": "^4.0.5",
-    "@types/ember__utils": "^4.0.6",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "babel-plugin-ember-template-compilation": "^2.2.1",
@@ -110,6 +91,10 @@
     "version": 2,
     "type": "addon",
     "main": "addon-main.cjs",
-    "app-js": {}
+    "app-js": {
+      "./components/spec/control/button/index.js": "./dist/_app_/components/spec/control/button/index.js",
+      "./components/spec/control/button/types.js": "./dist/_app_/components/spec/control/button/types.js",
+      "./components/spec/display/divider/index.js": "./dist/_app_/components/spec/display/divider/index.js"
+    }
   }
 }

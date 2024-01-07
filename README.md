@@ -10,7 +10,7 @@
 ## Installation
 
 ```
-ember install spuxx-ember-core
+ember install @spuxx/ember-core
 ```
 
 ## Usage

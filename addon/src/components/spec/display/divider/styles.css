@@ -1,0 +1,12 @@
+.spec__divider {
+  color: var(--spec-color-text-subtle);
+}
+
+.spec__divider-horizontal {
+  width: 100%;
+}
+
+.spec__divider-vertical {
+  height: 100%;
+  width: 1rem;
+}

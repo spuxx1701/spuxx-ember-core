@@ -4,23 +4,24 @@
   "license": "MIT",
   "author": "",
   "scripts": {
-    "build": "npm run build --workspace spuxx-ember-core",
+    "build": "npm run build --workspace addon",
     "lint": "npm run lint --workspaces --if-present",
     "lint:fix": "npm run lint:fix --workspaces --if-present",
     "prepare": "npm run build",
     "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
-    "start:addon": "npm start --workspace spuxx-ember-core -- --no-watch.clearScreen",
+    "start:addon": "npm start --workspace addon",
     "start:test-app": "npm start --workspace test-app",
     "test": "npm run test --workspaces --if-present",
     "test:ember": "npm run test:ember --workspaces --if-present"
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
+    "ember-template-lint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.3",
     "prettier-plugin-ember-template-tag": "^1.1.0"
   },
   "workspaces": [
-    "spuxx-ember-core",
+    "addon",
     "test-app"
   ]
 }

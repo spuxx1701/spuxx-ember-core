@@ -1,0 +1,64 @@
+<h2>Button</h2>
+{{#each this.variants as |variant|}}
+  <div class="showcase-section">
+    <h3>Button {{variant.label}}</h3>
+    <Spec::Display::Divider />
+    <div class="showcase-row">
+      <Spec::Control::Button
+        @title={{variant.label}}
+        @variant={{variant.value}}
+      />
+      <Spec::Control::Button
+        @title="{{variant.label}} (disabled)"
+        @variant={{variant.value}}
+        disabled={{true}}
+      />
+      <Spec::Control::Button
+        @title="{{variant.label}} (busy)"
+        @variant={{variant.value}}
+        @busy={{true}}
+      />
+    </div>
+    <div class="showcase-row">
+      <Spec::Control::Button
+        @title="{{variant.label}} with icon"
+        @variant={{variant.value}}
+        @icon="plus"
+      />
+      <Spec::Control::Button
+        @title="{{variant.label}} with icon (disabled)"
+        @variant={{variant.value}}
+        @icon="plus"
+        disabled={{true}}
+      />
+      <Spec::Control::Button
+        @title="{{variant.label}} with Icon (busy)"
+        @variant={{variant.value}}
+        @icon="plus"
+        @busy={{true}}
+      />
+    </div>
+    <div class="showcase-row">
+      <Spec::Control::Button
+        @title="{{variant.label}} with block content"
+        @variant={{variant.value}}
+      >
+        <p>{{variant.label}} with block content</p>
+      </Spec::Control::Button>
+      <Spec::Control::Button
+        @title="{{variant.label}} with block content (disabled)"
+        @variant={{variant.value}}
+        disabled={{true}}
+      >
+        <p>{{variant.label}} with block content (disabled)</p>
+      </Spec::Control::Button>
+      <Spec::Control::Button
+        @title="{{variant.label}} with block content (busy)"
+        @variant={{variant.value}}
+        @busy={{true}}
+      >
+        <p>{{variant.label}} with block content (busy)</p>
+      </Spec::Control::Button>
+    </div>
+  </div>
+{{/each}}

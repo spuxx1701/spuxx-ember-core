@@ -1,0 +1,23 @@
+:root {
+  /*  Layout & Sizing */
+  --spec-control-height: 45px;
+  --spec-font-size: 1em;
+
+  /* Colors */
+  --spec-color-primary: #498082;
+  --spec-color-primary-content: var(--color-text-highlight);
+  --spec-color-secondary: #498082;
+  --spec-color-secondary-content: #498082;
+  --spec-color-tertiary: transparent;
+  --spec-color-tertiary-content: #498082;
+  --spec-color-accent: #00ffff;
+  --spec-color-text-default: #f1f1f1;
+  --spec-color-text-highlight: white;
+  --spec-color-text-subtle: #959595;
+
+  /* Filters */
+  --spec-filter-disabled: grayscale(1) opacity(0.65);
+
+  /* Misc */
+  --spec-border-radius: 4px;
+}
