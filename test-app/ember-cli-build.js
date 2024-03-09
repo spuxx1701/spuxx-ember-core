@@ -8,6 +8,8 @@ module.exports = function (defaults) {
     autoImport: {
       watchDependencies: ['@spuxx/ember-core'],
     },
+    // Disable ember-qunit since we use playwright
+    tests: false,
   });
 
   const { maybeEmbroider } = require('@embroider/test-setup');

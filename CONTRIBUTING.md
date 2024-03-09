@@ -18,9 +18,7 @@
 
 ## Running tests
 
-- `cd test-app`
-- `npm run test` – Runs the test suite on the current Ember version
-- `npm run test:watch` – Runs the test suite in "watch mode"
+- `npm run test` – Runs all tests.
 
 ## Running the test application
 

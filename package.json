@@ -11,8 +11,7 @@
     "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
     "start:addon": "npm start --workspace addon",
     "start:test-app": "npm start --workspace test-app",
-    "test": "npm run test --workspaces --if-present",
-    "test:ember": "npm run test:ember --workspaces --if-present"
+    "test": "npm run test --workspaces --if-present"
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
