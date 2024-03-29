@@ -1,0 +1,15 @@
+:root {
+  --color-brand: #498082;
+  --color-app-background: #121212;
+  --color-header-background: #0c0c0c;
+  --color-body-background: #292929;
+  --color-code-background: #202020;
+  --color-quote-background: rgb(73, 128, 130, 0.25);
+  --color-text-default: #f1f1f1;
+  --color-text-highlight: white;
+  --color-text-link: #498082;
+  --color-text-link-hover: #64c8c8;
+  --color-text-subtle: #c5c5c5;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  --border-radius: 4px;
+}

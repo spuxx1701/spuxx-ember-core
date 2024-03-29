@@ -1,0 +1,76 @@
+<h2>Info Wrapper</h2>
+<div class='showcase-section'>
+  <h3>With generic content</h3>
+  <Spec::Display::Divider />
+  <div class='showcase-row'>
+    <Spec::Control::InfoWrapper @variant='tertiary-plain' @icon='info-circle'>
+      <h2>Lorem ipsum</h2>
+    </Spec::Control::InfoWrapper>
+  </div>
+  <div class='showcase-row'>
+    <Spec::Control::InfoWrapper @variant='tertiary-plain' @icon='info-circle'>
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+    </Spec::Control::InfoWrapper>
+  </div>
+</div>
+
+<div class='showcase-section'>
+  <h3>With controls</h3>
+  <Spec::Display::Divider />
+  <div class='showcase-row'>
+    <Spec::Control::InfoWrapper @size='medium' @variant='primary-outline'>
+      <Spec::Control::Button @variant='primary'>
+        Primary Button
+      </Spec::Control::Button>
+    </Spec::Control::InfoWrapper>
+    <Spec::Control::InfoWrapper @size='medium' @variant='secondary'>
+      <Spec::Control::Button @variant='secondary'>
+        Primary Button
+      </Spec::Control::Button>
+    </Spec::Control::InfoWrapper>
+    <Spec::Control::InfoWrapper @size='medium' @variant='secondary-outline'>
+      <Spec::Control::Button @variant='secondary-outline'>
+        Primary Button
+      </Spec::Control::Button>
+    </Spec::Control::InfoWrapper>
+    <Spec::Control::InfoWrapper @size='medium' @variant='tertiary'>
+      <Spec::Control::Button @variant='tertiary-outline'>
+        Primary Button
+      </Spec::Control::Button>
+    </Spec::Control::InfoWrapper>
+  </div>
+</div>
+
+<div class='showcase-section'>
+  <h3>With a custom icon</h3>
+  <Spec::Display::Divider />
+  <div class='showcase-row'>
+    <Spec::Control::InfoWrapper @icon='plus'>
+      <Spec::Control::Button>
+        Button
+      </Spec::Control::Button>
+    </Spec::Control::InfoWrapper>
+  </div>
+</div>
+
+<div class='showcase-section'>
+  <h3>Sizing</h3>
+  <Spec::Display::Divider />
+  <div class='showcase-row'>
+    <Spec::Control::InfoWrapper @size='medium'>
+      <Spec::Control::Button>
+        Button
+      </Spec::Control::Button>
+    </Spec::Control::InfoWrapper>
+    <Spec::Control::InfoWrapper @size='large'>
+      <Spec::Control::Button>
+        Button
+      </Spec::Control::Button>
+    </Spec::Control::InfoWrapper>
+    <Spec::Control::InfoWrapper @size='x-large'>
+      <Spec::Control::Button>
+        Button
+      </Spec::Control::Button>
+    </Spec::Control::InfoWrapper>
+  </div>
+</div>

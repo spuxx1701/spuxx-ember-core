@@ -1,64 +1,88 @@
 <h2>Button</h2>
 {{#each this.variants as |variant|}}
-  <div class="showcase-section">
-    <h3>Button {{variant.label}}</h3>
+  <div class='showcase-section'>
+    <h3>Variant: {{variant.value}}</h3>
     <Spec::Display::Divider />
-    <div class="showcase-row">
+    <div class='showcase-row'>
       <Spec::Control::Button
         @title={{variant.label}}
         @variant={{variant.value}}
       />
       <Spec::Control::Button
-        @title="{{variant.label}} (disabled)"
+        @title='{{variant.label}} (disabled)'
         @variant={{variant.value}}
         disabled={{true}}
       />
       <Spec::Control::Button
-        @title="{{variant.label}} (busy)"
+        @title='{{variant.label}} (busy)'
         @variant={{variant.value}}
         @busy={{true}}
       />
     </div>
-    <div class="showcase-row">
+    <div class='showcase-row'>
       <Spec::Control::Button
-        @title="{{variant.label}} with icon"
+        @title='{{variant.label}} with icon'
         @variant={{variant.value}}
-        @icon="plus"
+        @icon='plus'
       />
       <Spec::Control::Button
-        @title="{{variant.label}} with icon (disabled)"
+        @title='{{variant.label}} with icon (disabled)'
         @variant={{variant.value}}
-        @icon="plus"
+        @icon='plus'
         disabled={{true}}
       />
       <Spec::Control::Button
-        @title="{{variant.label}} with Icon (busy)"
+        @title='{{variant.label}} with Icon (busy)'
         @variant={{variant.value}}
-        @icon="plus"
+        @icon='plus'
         @busy={{true}}
       />
     </div>
-    <div class="showcase-row">
+    <div class='showcase-row'>
       <Spec::Control::Button
-        @title="{{variant.label}} with block content"
+        @title='{{variant.label}} with block content'
         @variant={{variant.value}}
       >
         <p>{{variant.label}} with block content</p>
       </Spec::Control::Button>
       <Spec::Control::Button
-        @title="{{variant.label}} with block content (disabled)"
+        @title='{{variant.label}} with block content (disabled)'
         @variant={{variant.value}}
         disabled={{true}}
       >
         <p>{{variant.label}} with block content (disabled)</p>
       </Spec::Control::Button>
       <Spec::Control::Button
-        @title="{{variant.label}} with block content (busy)"
+        @title='{{variant.label}} with block content (busy)'
         @variant={{variant.value}}
         @busy={{true}}
       >
         <p>{{variant.label}} with block content (busy)</p>
       </Spec::Control::Button>
     </div>
+    <div class='showcase-row'>
+      <Spec::Control::Button
+        @title='{{variant.label}} Submit Button (with icon)'
+        @variant={{variant.value}}
+        @icon='envelope'
+        @busy={{this.busy}}
+        {{on 'click' this.setBusy}}
+      />
+      <Spec::Control::Button
+        @title='{{variant.label}} Submit Button'
+        @variant={{variant.value}}
+        @busy={{this.busy}}
+        {{on 'click' this.setBusy}}
+      />
+    </div>
   </div>
 {{/each}}
+<div class='showcase-section'>
+  <h3>Button sizes</h3>
+  <Spec::Display::Divider />
+  <div class='showcase-row'>
+    {{#each this.sizes as |size|}}
+      <Spec::Control::Button @title={{size.label}} @size={{size.value}} />
+    {{/each}}
+  </div>
+</div>

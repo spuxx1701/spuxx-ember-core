@@ -2,7 +2,7 @@
   "private": true,
   "repository": "",
   "license": "MIT",
-  "author": "",
+  "author": "spuxx",
   "scripts": {
     "build": "npm run build --workspace addon",
     "lint": "npm run lint --workspaces --if-present",
@@ -11,13 +11,15 @@
     "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
     "start:addon": "npm start --workspace addon",
     "start:test-app": "npm start --workspace test-app",
+    "start:test": "concurrently 'npm:start --workspace addon' 'npm:start:test --workspace test-app'",
     "test": "npm run test --workspaces --if-present"
   },
   "devDependencies": {
+    "@types/node": "^20.11.25",
     "concurrently": "^8.2.0",
     "ember-template-lint-plugin-prettier": "^5.0.0",
-    "prettier": "^3.0.3",
-    "prettier-plugin-ember-template-tag": "^1.1.0"
+    "prettier": "^3.2.5",
+    "prettier-plugin-ember-template-tag": "^2.0.0"
   },
   "workspaces": [
     "addon",

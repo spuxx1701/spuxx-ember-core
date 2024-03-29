@@ -76,7 +76,6 @@
     "eslint-plugin-n": "^16.4.0",
     "eslint-plugin-prettier": "^5.0.1",
     "prettier": "^3.1.1",
-    "prettier-plugin-ember-template-tag": "^1.1.0",
     "rollup": "^4.9.1",
     "rollup-plugin-copy": "^3.5.0",
     "typescript": "^5.3.3"
@@ -93,7 +92,7 @@
     "main": "addon-main.cjs",
     "app-js": {
       "./components/spec/control/button/index.js": "./dist/_app_/components/spec/control/button/index.js",
-      "./components/spec/control/button/types.js": "./dist/_app_/components/spec/control/button/types.js",
+      "./components/spec/control/info-wrapper/index.js": "./dist/_app_/components/spec/control/info-wrapper/index.js",
       "./components/spec/display/divider/index.js": "./dist/_app_/components/spec/display/divider/index.js"
     }
   }

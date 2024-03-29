@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('components', function () {
     this.route('control', function () {
       this.route('button');
+      this.route('info-wrapper');
     });
   });
 });

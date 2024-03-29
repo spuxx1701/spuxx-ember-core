@@ -1,0 +1,39 @@
+.spec__info-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spec__info-wrapper-button {
+  padding: 0;
+}
+
+.spec__info-wrapper-content:has(.spec__control) {
+  flex-grow: 1;
+}
+
+.spec__info-wrapper-content:not(:has(.spec__control))
+  + .spec__info-wrapper-button:not(
+    .spec__button-tertiary,
+    .spec__button-tertiary-plain
+  ) {
+  margin-left: 1rem;
+}
+
+.spec__info-wrapper-content:has(.spec__control) + .spec__info-wrapper-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.spec__info-wrapper-content > .spec__control {
+  width: 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.spec__info-wrapper-button.spec__button-primary-outline,
+.spec__info-wrapper-button.spec__button-secondary-outline,
+.spec__info-wrapper-button.spec__button-tertiary-outline {
+  border-left: none;
+}

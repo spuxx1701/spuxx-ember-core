@@ -1,5 +1,7 @@
 .spec__button {
+  position: relative;
   min-height: var(--spec-control-height);
+  max-height: var(--spec-control-height);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -11,12 +13,9 @@
   max-width: 100%;
 }
 
-.spec__button:not(:disabled):hover {
-  cursor: pointer;
-}
-
 .spec__button-icon {
   font-size: larger;
+  width: 18px;
 }
 
 .spec__button-text {
@@ -36,17 +35,61 @@
   color: var(--spec-color-primary-content);
 }
 
-.spec__button-secondary {
-  color: var(--spec-color-secondary);
-  border: 1px solid var(--spec-color-secondary-content);
+.spec__button-primary-outline {
   background-color: transparent;
+  border: 1px solid var(--spec-color-primary);
+  color: var(--spec-color-primary);
+}
+
+.spec__button-primary,
+.spec__button-primary-outline {
+  transition:
+    box-shadow 200ms,
+    transform 200ms;
+}
+
+.spec__button-secondary {
+  background-color: var(--spec-color-secondary);
+  color: var(--spec-color-secondary-content);
+}
+
+.spec__button-secondary-outline {
+  background-color: transparent;
+  border: 1px solid var(--spec-color-secondary);
+  color: var(--spec-color-secondary);
 }
 
 .spec__button-tertiary {
   background-color: var(--spec-color-tertiary);
   color: var(--spec-color-tertiary-content);
 }
+.spec__button-tertiary-outline {
+  background-color: transparent;
+  border: 1px solid var(--spec-color-tertiary);
+  color: var(--spec-color-tertiary);
+}
+
+.spec__button-tertiary-plain {
+  background-color: transparent;
+  color: inherit;
+}
 
 .spec__button:disabled {
   filter: var(--spec-filter-disabled);
+}
+
+.spec__button:not(:disabled):hover {
+  cursor: pointer;
+  filter: var(--spec-filter-hover);
+}
+
+.spec__button-primary:not(:disabled):hover,
+.spec__button-primary-outline:not(:disabled):hover {
+  box-shadow: 0 0 35px -10px var(--spec-color-primary);
+  transform: translateY(-2px);
+}
+
+.spec__button.spec__control-size-square .spec__button-icon {
+  position: absolute;
+  margin: auto;
 }

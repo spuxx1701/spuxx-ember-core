@@ -15,3 +15,37 @@
 .justify-content-center {
   justify-content: center;
 }
+
+.spec__control-size-auto {
+  width: auto;
+}
+
+.spec__control-size-square {
+  width: var(--spec-control-height);
+  min-width: var(--spec-control-height);
+  box-sizing: border-box;
+}
+
+.spec__control-size-max {
+  width: 100%;
+}
+
+.spec__control-size-small {
+  width: var(--spec-control-size-small);
+  max-width: min(var(--spec-control-size-small), 100%);
+}
+
+.spec__control-size-medium {
+  width: var(--spec-control-size-medium);
+  max-width: min(var(--spec-control-size-medium), 100%);
+}
+
+.spec__control-size-large {
+  width: var(--spec-control-size-large);
+  max-width: min(var(--spec-control-size-large), 100%);
+}
+
+.spec__control-size-x-large {
+  width: var(--spec-control-size-x-large);
+  max-width: min(var(--spec-control-size-x-large), 100%);
+}

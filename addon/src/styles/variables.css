@@ -2,21 +2,30 @@
   /*  Layout & Sizing */
   --spec-control-height: 45px;
   --spec-font-size: 1em;
+  --spec-control-size-square: var(--spec-control-height);
+  --spec-control-size-small: 8rem;
+  --spec-control-size-medium: 14rem;
+  --spec-control-size-large: 20rem;
+  --spec-control-size-x-large: 26rem;
 
   /* Colors */
-  --spec-color-primary: #498082;
-  --spec-color-primary-content: var(--color-text-highlight);
-  --spec-color-secondary: #498082;
-  --spec-color-secondary-content: #498082;
-  --spec-color-tertiary: transparent;
-  --spec-color-tertiary-content: #498082;
   --spec-color-accent: #00ffff;
   --spec-color-text-default: #f1f1f1;
+  --spec-color-text-inverse: black;
   --spec-color-text-highlight: white;
   --spec-color-text-subtle: #959595;
 
+  --spec-color-primary: #00ffff;
+  --spec-color-primary-content: var(--spec-color-text-inverse);
+  --spec-color-secondary: #498082;
+  --spec-color-secondary-content: var(--spec-color-text-default);
+  --spec-color-tertiary: var(--spec-color-text-subtle);
+  --spec-color-tertiary-content: var(--spec-color-text-inverse);
+
   /* Filters */
   --spec-filter-disabled: grayscale(1) opacity(0.65);
+  --spec-filter-hover: brightness(1.2);
+  --spec-filter-click-ripple: brightness(500%) contrast(50%);
 
   /* Misc */
   --spec-border-radius: 4px;

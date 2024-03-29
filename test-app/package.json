@@ -22,6 +22,7 @@
     "lint:js:fix": "eslint . --fix",
     "lint:types": "tsc --noEmit",
     "start": "ember serve",
+    "start:test": "ember serve --environment=test",
     "test": "playwright test"
   },
   "devDependencies": {
@@ -44,7 +45,6 @@
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "broccoli-asset-rev": "^3.0.0",
-    "concurrently": "^8.2.2",
     "ember-auto-import": "^2.7.0",
     "ember-cli": "~5.5.0",
     "ember-cli-app-version": "^6.0.1",
@@ -55,10 +55,8 @@
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
-    "ember-fetch": "^8.1.2",
     "ember-load-initializers": "^2.1.2",
     "ember-modifier": "^4.1.0",
-    "ember-page-title": "^8.1.0",
     "ember-resolver": "^11.0.1",
     "ember-source": "~5.5.0",
     "ember-source-channel-url": "^3.0.0",

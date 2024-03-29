@@ -2,10 +2,12 @@ import Component from '@glimmer/component';
 import { on } from '@ember/modifier';
 import { type IconName } from '@fortawesome/fontawesome-svg-core';
 import FaIcon from '@fortawesome/ember-fontawesome/components/fa-icon';
-import { ButtonVariant } from './types.ts';
+import {
+  type ControlSize,
+  type ButtonVariant,
+} from '../../../../types/control.ts';
 import './styles.css';
-
-export * from './types.ts';
+import { createClickRipple } from '../../../../utils/animation.ts';
 
 interface Signature {
   Element: HTMLButtonElement;
@@ -14,7 +16,7 @@ interface Signature {
      * Whether the button is busy or not. If true, than the button will be disabled
      * and a spinner will be shown. The spinner will not be shown if any block content is provided.
      */
-    busy: boolean;
+    busy?: boolean;
     /*
      * The button's title. Will also be used as the button's text as as long as no block
      * content is provided.
@@ -28,6 +30,10 @@ interface Signature {
      * The button's variant. Defines what the button looks like. Defaults to 'primary'.
      */
     variant?: ButtonVariant;
+    /**
+     * The button's size. Defines the width of the button. Defaults to 'auto'.
+     */
+    size?: ControlSize;
     /*
      * Listens to the button's click event.
      */
@@ -43,7 +49,12 @@ export default class Button extends Component<Signature> {
     return this.args.variant ?? 'primary';
   }
 
+  get size() {
+    return this.args.size ?? 'auto';
+  }
+
   handleClick = (event: MouseEvent) => {
+    createClickRipple(event);
     const { onClick } = this.args;
     if (onClick) {
       onClick(event);
@@ -52,8 +63,9 @@ export default class Button extends Component<Signature> {
 
   <template>
     <button
-      class='spec__button spec__button-{{this.variant}}'
-      role='button'
+      class='spec__control spec__button spec__button-{{this.variant}}
+        spec__control-size-{{this.size}}'
+      type='button'
       title={{@title}}
       aria-label={{@title}}
       disabled={{@busy}}
@@ -69,7 +81,6 @@ export default class Button extends Component<Signature> {
           <FaIcon class='spec__button-icon' @icon='spinner' @spin={{true}} />
         {{/unless}}
         <p class='spec__button-text'>{{@title}}</p>
-
       {{else}}
         {{yield}}
       {{/unless}}

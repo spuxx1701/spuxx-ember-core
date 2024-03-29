@@ -1,14 +1,44 @@
 /* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+@import 'colors.css';
+
 html * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
-  background-color: hsl(224, 14%, 16%);
-  max-width: min(1200px, 95%);
-  margin: auto;
+  background-color: var(--color-app-background);
   color: var(--spec-color-text-default);
   font-size: var(--spec-font-size);
+  margin: 0;
+}
+
+header {
+  display: flex;
+  background-color: var(--color-header-background);
+  padding: 0 5rem;
+  box-shadow: 0px 5px 5px -5px var(--color-header-background);
+}
+
+header * {
+  color: var(--spec-color-text-default);
+  text-decoration: none;
+}
+
+.header-content {
+  display: flex;
+  width: 100%;
+  max-width: min(1200px, 95%);
+  margin: auto;
+}
+
+.header-environment {
+  margin: auto 1rem;
+  color: var(--spec-color-text-subtle);
+}
+
+main {
+  max-width: min(1200px, 95%);
+  margin: auto;
 }
 
 .showcase-section {
@@ -29,4 +59,8 @@ body {
 .showcase-row > * {
   margin-top: 0.25rem;
   margin-right: 0.25rem;
+}
+
+a {
+  color: var(--color-text-link);
 }

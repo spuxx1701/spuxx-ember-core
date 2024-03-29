@@ -1,5 +1,13 @@
-{{page-title "@spuxx/ember-core"}}
+<header>
+  <div class='header-content'>
+    <LinkTo @route='index' class='application-header'><h1
+        id='title'
+      >@spuxx/ember-core</h1></LinkTo>
 
-<h1 id="title">@spuxx/ember-core</h1>
+    <p class='header-environment'>({{this.environment}})</p>
+  </div>
+</header>
 
-{{outlet}}
+<main>
+  {{outlet}}
+</main>
